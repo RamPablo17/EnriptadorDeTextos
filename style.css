@@ -1,263 +1,205 @@
+/* Estilos globales */
 * {
   margin: 0;
   padding: 0;
 }
 
 .header {
-  background: #f3f5fc;
-  height: 9vh;
+  background: #f3f5fc; /* Fondo del encabezado */
+  height: 9vh; /* Altura del encabezado */
 }
 
 .header img {
-  position: relative;
-  top: 15px;
+  position: relative; /* Posición relativa para la imagen del encabezado */
+  top: 15px; /* Desplazamiento hacia abajo */
 }
 
 .container {
-  position: relative;
-  width: 100vw;
-  height: 98vh;
-  background: #f3f5fc;
+  position: relative; /* Posición relativa para el contenedor principal */
+  width: 100vw; /* Ancho igual al viewport */
+  height: 98vh; /* Altura igual al viewport menos el encabezado */
+  background: #f3f5fc; /* Fondo del contenedor principal */
 }
 
 .texto {
-  position: absolute;
-  width: 42%;
-  height: 60%;
-  left: 12%;
-  top: 15%;
-  border: none;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 150%;
-  background-color: #f3f5fc;
+  position: absolute; /* Posición absoluta para el área de texto */
+  width: 42%; /* Ancho del área de texto */
+  height: 60%; /* Altura del área de texto */
+  left: 12%; /* Distancia desde el borde izquierdo */
+  top: 15%; /* Distancia desde el borde superior */
+  border: none; /* Sin borde */
+  font-family: "Inter"; /* Familia de fuente */
+  font-style: normal; /* Estilo de fuente */
+  font-weight: 400; /* Peso de la fuente */
+  font-size: 32px; /* Tamaño de fuente */
+  line-height: 150%; /* Altura de línea */
+  background-color: #f3f5fc; /* Color de fondo del área de texto */
 }
 
 .texto::placeholder {
-  color: #0a3871;
+  color: #0a3871; /* Color del texto de marcador de posición */
 }
 
 .texto:focus,
 .texto:active {
-  border: none;
-  outline: none;
+  border: none; /* Sin borde al estar enfocado o activo */
+  outline: none; /* Sin contorno al estar enfocado o activo */
 }
 
 .terminos {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  gap: 8px;
-  position: absolute;
-  width: 80%;
-  left: 12%;
-  top: 80%;
+  display: flex; /* Mostrar como flexbox */
+  flex-direction: row; /* Dirección de fila */
+  align-items: center; /* Centrar elementos verticalmente */
+  padding: 0px; /* Relleno cero */
+  gap: 8px; /* Espacio entre elementos */
+  position: absolute; /* Posición absoluta */
+  width: 80%; /* Ancho del elemento */
+  left: 12%; /* Distancia desde el borde izquierdo */
+  top: 80%; /* Distancia desde el borde superior */
 }
 
 .terminos p {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 150%;
-  color: #495057;
-  opacity: 0.8;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
+  font-family: "Inter"; /* Familia de fuente */
+  font-style: normal; /* Estilo de fuente */
+  font-weight: 400; /* Peso de la fuente */
+  font-size: 12px; /* Tamaño de fuente */
+  line-height: 150%; /* Altura de línea */
+  color: #495057; /* Color del texto */
+  opacity: 0.8; /* Opacidad del texto */
+  flex: none; /* No crecer */
+  order: 1; /* Orden de aparición */
+  flex-grow: 0; /* No crecer */
 }
 
 .botones {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 1% 0;
-  position: absolute;
-  width: 80%;
-  left: 12%;
-  top: 82%;
+  display: flex; /* Mostrar como flexbox */
+  flex-direction: row; /* Dirección de fila */
+  align-items: flex-start; /* Alinear elementos al inicio */
+  padding: 1% 0; /* Relleno superior e inferior */
+  position: absolute; /* Posición absoluta */
+  width: 80%; /* Ancho del elemento */
+  left: 12%; /* Distancia desde el borde izquierdo */
+  top: 82%; /* Distancia desde el borde superior */
 }
 
 .btn-encriptar {
-  align-items: center;
-  justify-content: center;
-  padding: 2%;
-  gap: 8px;
-  width: 25%;
-  background-color: #0a3871;
-  border-radius: 24px;
-  font-family: "Inter";
-  font-size: 18px;
-  line-height: 19px;
-  text-align: center;
-  color: #fff;
+  align-items: center; /* Alinear elementos al centro */
+  justify-content: center; /* Justificar contenido al centro */
+  padding: 2%; /* Relleno */
+  gap: 8px; /* Espacio entre elementos */
+  width: 25%; /* Ancho del botón */
+  background-color: #0a3871; /* Color de fondo */
+  border-radius: 24px; /* Radio de borde */
+  font-family: "Inter"; /* Familia de fuente */
+  font-size: 18px; /* Tamaño de fuente */
+  line-height: 19px; /* Altura de línea */
+  text-align: center; /* Alineación de texto */
+  color: #fff; /* Color del texto */
 }
 
 .btn-desencriptar {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 2%;
-  gap: 8px;
-  width: 25%;
-  background: #d8dfe8;
-  border: 1px solid #0a3871;
-  border-radius: 24px;
-  font-family: "Inter";
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 19px;
-  text-align: center;
-  color: #0a3871;
+  box-sizing: border-box; /* Tamaño de caja incluyendo el borde */
+  display: flex; /* Mostrar como flexbox */
+  flex-direction: row; /* Dirección de fila */
+  align-items: flex-start; /* Alinear elementos al inicio */
+  justify-content: center; /* Justificar contenido al centro */
+  padding: 2%; /* Relleno */
+  gap: 8px; /* Espacio entre elementos */
+  width: 25%; /* Ancho del botón */
+  background: #d8dfe8; /* Color de fondo */
+  border: 1px solid #0a3871; /* Borde sólido */
+  border-radius: 24px; /* Radio de borde */
+  font-family: "Inter"; /* Familia de fuente */
+  font-weight: 400; /* Peso de la fuente */
+  font-size: 18px; /* Tamaño de fuente */
+  line-height: 19px; /* Altura de línea */
+  text-align: center; /* Alineación de texto */
+  color: #0a3871; /* Color del texto */
 }
 
 .btn-desencriptar:hover,
 .btn-encriptar:hover {
-  margin: 0.3%;
-  width: 24.5%;
-  padding: 1.8%;
+  margin: 0.3%; /* Margen */
+  width: 24.5%; /* Ancho al hacer hover */
+  padding: 1.8%; /* Relleno al hacer hover */
 }
 
 .encriptado {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  width: 30%;
-  height: 90%;
-  left: 60%;
-  top: 5%;
-  background: #fff;
-  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-  border-radius: 32px;
+  display: flex; /* Mostrar como flexbox */
+  justify-content: center; /* Justificar contenido al centro */
+  position: absolute; /* Posición absoluta */
+  width: 30%; /* Ancho del elemento */
+  height: 90%; /* Altura del elemento */
+  left: 60%; /* Distancia desde el borde izquierdo */
+  top: 5%; /* Distancia desde el borde superior */
+  background: #fff; /* Color de fondo */
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); /* Sombra */
+  border-radius: 32px; /* Radio de borde */
 }
 
 .mensaje-encriptado {
-  display: none; /* Inicialmente oculto */
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1%;
-  gap: 16px;
-  position: absolute;
-  width: 100%;
-  top: 65%;
-  text-align: center;
+  display: flex; /* Mostrar como flexbox */
+  flex-direction: column; /* Dirección de columna */
+  align-items: center; /* Alinear elementos al centro */
+  justify-content: center; /* Justificar contenido al centro */
+  padding: 1%; /* Relleno */
+  gap: 16px; /* Espacio entre elementos */
+  position: absolute; /* Posición absoluta */
+  width: 100%; /* Ancho del elemento */
+  top: 65%; /* Distancia desde el borde superior */
+  text-align: center; /* Alineación de texto */
+}
+
+.mensaje-encriptado h2 {
+  width: 60%; /* Ancho del título */
+  font-family: "Inter"; /* Familia de fuente */
+  font-style: normal; /* Estilo de fuente */
+  font-weight: 700; /* Peso de la fuente */
+  font-size: 24px; /* Tamaño de fuente */
+  line-height: 120%; /* Altura de línea */
+  text-align: center; /* Alineación de texto */
+  color: #343a40; /* Color del texto */
 }
 
 .mensaje-encriptado p {
-  width: 80%;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  text-align: center;
-  color: #495057;
+  width: 80%; /* Ancho del párrafo */
+  font-family: "Inter"; /* Familia de fuente */
+  font-style: normal; /* Estilo de fuente */
+  font-weight: 400; /* Peso de la fuente */
+  font-size: 16px; /* Tamaño de fuente */
+  line-height: 150%; /* Altura de línea */
+  text-align: center; /* Alineación de texto */
+  color: #495057; /* Color del texto */
 }
 
-.encriptado img#muñeco {
-  position: absolute;
-  width: 80%;
-  height: 50%;
-  top: 15%;
+.encriptado .muñeco-img {
+  position: absolute; /* Posición absoluta */
+  width: 80%; /* Ancho de la imagen */
+  height: 50%; /* Altura de la imagen */
+  top: 15%; /* Distancia desde el borde superior */
 }
 
-.encriptado .botones {
+#btn-copiar {
   display: none; /* Inicialmente oculto */
-  position: absolute;
-  bottom: 10%;
-  width: 100%;
-  text-align: center;
+  position: absolute; /* Posición absoluta */
+  width: 80%; /* Ancho del botón */
+  left: 10%; /* Distancia desde el borde izquierdo */
+  bottom: 10%; /* Distancia desde el borde inferior */
+  padding: 2%; /* Relleno */
+  background-color: #fff; /* Color de fondo */
+  border: 1px solid #0a3871; /* Borde sólido */
+  border-radius: 24px; /* Radio de borde */
+  font-family: "Inter"; /* Familia de fuente */
+  font-size: 18px; /* Tamaño de fuente */
+  line-height: 19px; /* Altura de línea */
+  text-align: center; /* Alineación de texto */
+  color: #0A3871; /* Color del texto */
+  cursor: pointer; /* Cursor apuntador */
 }
 
-.encriptado .botones button {
-  padding: 10px 20px;
-  background-color: #0a3871;
-  color: #fff;
-  border: none;
-  border-radius: 24px;
-  font-family: "Inter";
-  font-size: 16px;
-  cursor: pointer;
+#btn-copiar:hover {
+  background-color: #fff; /* Color de fondo al hacer hover */
 }
 
-.encriptado .botones button:hover {
-  background-color: #083056;
-}
-
-/* Responsive design */
-@media (max-width: 57.5em) {
-  .container {
-      display: flex;
-      flex-direction: row;
-  }
-
-  .encriptar {
-      width: 100%;
-  }
-
-  .texto {
-      width: 80%;
-      height: 60%;
-      left: 10%;
-      top: 5%;
-  }
-
-  .terminos {
-      width: 80%;
-      left: 10%;
-      top: 67%;
-  }
-
-  .terminos p {
-      font-size: 16px;
-  }
-
-  .botones {
-      width: 80%;
-      left: 10%;
-      top: 70%;
-  }
-
-  .btn-encriptar,
-  .btn-desencriptar {
-      width: 48%;
-      border-radius: 16px;
-  }
-
-  .btn-encriptar:hover,
-  .btn-desencriptar:hover {
-      margin: 0.3%;
-      width: 47.5%;
-      padding: 1.8%;
-  }
-
-  .encriptado {
-      width: 80%;
-      height: 15%;
-      left: 10%;
-      top: 80%;
-  }
-
-  .mensaje-encriptado {
-      width: 100%;
-      top: 5%;
-  }
-
-  .encriptado img#muñeco {
-      top: 0;
-      display: none;
-      visibility: hidden;
-  }
-
-  .encriptado .botones {
-      bottom: 5%;
-  }
-}
 
 
