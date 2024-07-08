@@ -1,61 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Encriptador de Texto</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="header">
-    <img src="./Imagenes/Logo.png">
-  </header>
-  <div class="container">
-    <div class="encriptar">
-      <textarea
-        name="texto"
-        class="texto"
-        id="texto"
-        cols="30"
-        rows="10"
-        placeholder="Ingresa el texto aquí"
-      ></textarea>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8" /> <!-- Codificación del documento -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Configuración de compatibilidad -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Escalado inicial para dispositivos móviles -->
+    <title>Encriptador de Texto</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="style.css"> <!-- Enlace al archivo de estilos -->
+  </head>
+  <body>
+    <header class="header">
+      <img src="./Imagenes/Logo.png"> <!-- Imagen del logo en el encabezado -->
+    </header>
+    <div class="container">
+      <!-- Contenedor principal -->
+      <div class="encriptar">
+        <!-- Sección para encriptar -->
+        <textarea
+          name="texto"
+          class="texto"
+          id="texto"
+          cols="30"
+          rows="10"
+          placeholder="Ingresa el texto aquí"
+        ></textarea>
+        <!-- Área de texto para ingresar el mensaje -->
 
-      <div class="terminos">
-        <img src="./Imagenes/Group.png">
-        <p>Solo letras minúsculas y sin acentos.</p>
+        <div class="terminos">
+          <!-- Sección de términos -->
+          <img src="./Imagenes/Group.png">
+          <!-- Icono de términos -->
+          <p>Solo letras minúsculas y sin acentos.</p> <!-- Texto de los términos -->
+        </div>
+        <div class="botones">
+          <!-- Sección de botones -->
+          <button class="btn-encriptar" type="button" onclick="encriptar()">
+            Encriptar
+          </button>
+          <!-- Botón para encriptar -->
+          <input
+            type="button"
+            class="btn-desencriptar"
+            value="Desencriptar"
+            onclick="desencriptar()"
+          />
+          <!-- Botón para desencriptar -->
+        </div>
       </div>
-      <div class="botones">
-        <button class="btn-encriptar" type="button" onclick="encriptar()">
-          Encriptar
-        </button>
-        <input
-          type="button"
-          class="btn-desencriptar"
-          value="Desencriptar"
-          onclick="desencriptar()"
-        />
+      <div class="encriptado">
+        <!-- Sección de resultado encriptado -->
+        <div class="mensaje-encriptado" id="mensaje-encriptado">
+          <!-- Contenedor del mensaje encriptado -->
+          <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+          <!-- Título inicial -->
+          <p id="parrafo">
+            Ingresa el texto que deseas encriptar o desencriptar
+          </p>
+          <!-- Párrafo inicial -->
+          <p id="texto-encriptado" class="texto-encriptado"></p>
+          <!-- Aquí se mostrará el texto encriptado o desencriptado -->
+        </div>
+        <button id="btn-copiar" onclick="copiarTexto()">Copiar texto</button>
+        <!-- Botón para copiar el texto -->
+        <img src="./Imagenes/muñeco.png" class="muñeco-img" />
+        <!-- Imagen del muñeco -->
       </div>
     </div>
-    <div class="encriptado">
-      <div class="mensaje-encriptado" id="mensaje-encriptado">
-        <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
-        <p id="parrafo">
-          Ingresa el texto que deseas encriptar o desencriptar
-        </p>
-        <p id="texto-encriptado" class="texto-encriptado"></p>
-      </div>
-      <button id="btn-copiar" onclick="copiarTexto()">Copiar texto</button>
-      <img src="./Imagenes/muñeco.png" class="muñeco-img" />
-    </div>
-  </div>
-  <script src="index.js"></script>
-</body>
-</html>
-
-
-
-
-
-
+    <script src="index.js"></script>
+    <!-- Enlace al archivo JavaScript -->
+    <footer class="Footer">
+      <p>Desarrollado por Pablo Ramirez Cabrera </p>
+      <!-- Pie de página -->
+    </footer>
+  </body>
+  </html>
