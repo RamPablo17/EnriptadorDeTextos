@@ -1,9 +1,10 @@
 /* Estilos globales */
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0; /* Elimina el margen predeterminado */
+  padding: 0; /* Elimina el relleno predeterminado */
 }
 
+/* Estilos para el encabezado */
 .header {
   background: #f3f5fc; /* Fondo del encabezado */
   height: 9vh; /* Altura del encabezado */
@@ -14,6 +15,7 @@
   top: 15px; /* Desplazamiento hacia abajo */
 }
 
+/* Estilos para el contenedor principal */
 .container {
   position: relative; /* Posición relativa para el contenedor principal */
   width: 100vw; /* Ancho igual al viewport */
@@ -21,6 +23,7 @@
   background: #f3f5fc; /* Fondo del contenedor principal */
 }
 
+/* Estilos para el área de texto */
 .texto {
   position: absolute; /* Posición absoluta para el área de texto */
   width: 42%; /* Ancho del área de texto */
@@ -46,11 +49,11 @@
   outline: none; /* Sin contorno al estar enfocado o activo */
 }
 
+/* Estilos para la sección de términos */
 .terminos {
   display: flex; /* Mostrar como flexbox */
   flex-direction: row; /* Dirección de fila */
   align-items: center; /* Centrar elementos verticalmente */
-  padding: 0px; /* Relleno cero */
   gap: 8px; /* Espacio entre elementos */
   position: absolute; /* Posición absoluta */
   width: 80%; /* Ancho del elemento */
@@ -66,11 +69,9 @@
   line-height: 150%; /* Altura de línea */
   color: #495057; /* Color del texto */
   opacity: 0.8; /* Opacidad del texto */
-  flex: none; /* No crecer */
-  order: 1; /* Orden de aparición */
-  flex-grow: 0; /* No crecer */
 }
 
+/* Estilos para los botones */
 .botones {
   display: flex; /* Mostrar como flexbox */
   flex-direction: row; /* Dirección de fila */
@@ -124,6 +125,7 @@
   padding: 1.8%; /* Relleno al hacer hover */
 }
 
+/* Estilos para la sección encriptada */
 .encriptado {
   display: flex; /* Mostrar como flexbox */
   justify-content: center; /* Justificar contenido al centro */
@@ -137,6 +139,7 @@
   border-radius: 32px; /* Radio de borde */
 }
 
+/* Estilos para el mensaje encriptado */
 .mensaje-encriptado {
   display: flex; /* Mostrar como flexbox */
   flex-direction: column; /* Dirección de columna */
@@ -146,7 +149,7 @@
   gap: 16px; /* Espacio entre elementos */
   position: absolute; /* Posición absoluta */
   width: 100%; /* Ancho del elemento */
-  top: 65%; /* Distancia desde el borde superior */
+  top: 20%; /* Distancia desde el borde superior */
   text-align: center; /* Alineación de texto */
 }
 
@@ -172,6 +175,7 @@
   color: #495057; /* Color del texto */
 }
 
+/* Estilos para la imagen del muñeco */
 .encriptado .muñeco-img {
   position: absolute; /* Posición absoluta */
   width: 80%; /* Ancho de la imagen */
@@ -179,6 +183,7 @@
   top: 15%; /* Distancia desde el borde superior */
 }
 
+/* Estilos para el botón de copiar texto */
 #btn-copiar {
   display: none; /* Inicialmente oculto */
   position: absolute; /* Posición absoluta */
@@ -200,6 +205,3 @@
 #btn-copiar:hover {
   background-color: #fff; /* Color de fondo al hacer hover */
 }
-
-
-
