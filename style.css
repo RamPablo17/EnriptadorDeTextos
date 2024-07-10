@@ -10,7 +10,6 @@
 .header {
   background: #f3f5fc; /* Fondo del encabezado */
   height: 13vh; /* Altura del encabezado */
-  
 }
 
 .header img {
@@ -23,7 +22,7 @@
 .Contenedor {
   position: relative; /* Posición relativa para el contenedor principal */
   width: 100vw; /* Ancho igual al viewport */
-  height: 75vh; /* Altura igual al viewport menos el encabezado */
+  height: 80vh; /* Altura igual al viewport menos el encabezado */
   background: #f3f5fc; /* Fondo del contenedor principal */
 }
 
@@ -130,126 +129,102 @@
   padding: 1.8%; /* Relleno al hacer hover */
 }
 
-/* Estilos para la sección encriptada */
+/* Estilos para la sección de encriptado */
 .Sec-encriptado {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  width: 30%;
-  height: 100%;
-  left: 60%;
-  top: 5%;
-  background: #fff;
-  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-  border-radius: 32px;
-}
-
-/* Estilos para la imagen del muñeco */
-.Sec-encriptado .muñeco-img {
   position: absolute; /* Posición absoluta */
-  width: 80%; /* Ancho de la imagen */
-  height: 50%; /* Altura de la imagen */
-  top: 15%; /* Distancia desde el borde superior */
+  width: 30%; /* Ancho del elemento */
+  height: 93%; /* Altura del elemento */
+  left: 60%; /* Distancia desde el borde izquierdo */
+  top: 5%; /* Distancia desde el borde superior */
+  background: #ffffff; /* Fondo */
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.12); /* Sombra */
+  border-radius: 8px; /* Radio de borde */
+  overflow: hidden; /* Ocultar desbordamiento */
 }
-
-/* Estilos para el mensaje encriptado */
-.Mensaje-encriptado {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* Alineación vertical y centrado */
-  padding: 1%;
-  gap: 16px;
-  position: absolute;
-  width: 100%;
-  top: 67%;
-  text-align: center;
-}
-
 .Mensaje-encriptado h2 {
-  width: 60%;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 150%;
-  text-align: center;
-  color: #343a40;
+  margin-top: 59px; /* Ajuste del margen superior */
+  font-weight: bold;
+  font-size: 24px; /* Tamaño de fuente */
+  text-align: center; /* Alineación centrada del texto */
 }
 
-.Mensaje-encriptado .Instrucción {
-  width: 80%;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  text-align: center;
-  color: #495057;
-}
-.Mensaje-encriptado .texto-encriptado {
-  width: 80%;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 150%;
-  text-align: center;
-  color: #495057;
+
+.Mensaje-encriptado {
+  position: absolute; /* Posición absoluta */
+  width: 100%; /* Ancho */
+  height: 100%; /* Altura */
+  display: flex; /* Mostrar como flexbox */
+  flex-direction: column; /* Dirección de columna */
+  align-items: center; /* Alinear elementos al centro */
+  justify-content: center; /* Justificar contenido al centro */
+  gap: 16px; /* Espacio entre elementos */
 }
 
-.Instruccion{
-  width: 80%; /* Ancho del párrafo */
+.Mensaje-encriptado h2,
+.Mensaje-encriptado p {
+  margin: 0; /* Elimina el margen */
   font-family: "Inter", sans-serif; /* Familia de fuente */
-  font-style: normal; /* Estilo de fuente */
   font-weight: 400; /* Peso de la fuente */
-  font-size: 16px; /* Tamaño de fuente */
+  font-size: 20px; /* Tamaño de fuente */
   line-height: 150%; /* Altura de línea */
   text-align: center; /* Alineación de texto */
   color: #495057; /* Color del texto */
 }
 
-/* Estilos para el botón de copiar texto */
+.Mensaje-encriptado #Texto-encriptado {
+  display: none; /* Ocultar el texto inicialmente */
+}
+
 #Boton-copiar {
-  display: none; /* Inicialmente oculto */
-  position: absolute; /* Posición absoluta */
-  width: 90%; /* Aumentar el ancho del botón */
-  left: 5%; /* Ajustar la distancia desde el borde izquierdo */
-  bottom: 7%; /* Distancia desde el borde inferior */
-  height: 70px; /* Aumentar la altura del botón */
+  display: none; /* Ocultar el botón inicialmente */
+  padding: 4%; /* Relleno */
+  gap: 8px; /* Espacio entre elementos */
+  width: 80%; /* Ancho del botón */
   background-color: #fff; /* Color de fondo */
-  border: 1px solid #0a3871; /* Borde sólido */
   border-radius: 24px; /* Radio de borde */
   font-family: "Inter", sans-serif; /* Familia de fuente */
   font-size: 18px; /* Tamaño de fuente */
   line-height: 19px; /* Altura de línea */
   text-align: center; /* Alineación de texto */
-  color: #0A3871; /* Color del texto */
-  cursor: pointer; /* Cursor apuntador */
+  color: #0a3871; /* Color del texto */
+  cursor: pointer; /* Cursor de puntero */
+  position: absolute; /* Posición absoluta */
+  bottom: 3%; /* Distancia desde el borde inferior */
+  left: 12%; /* Distancia desde el borde izquierdo */
 }
 
 #Boton-copiar:hover {
-  background-color: #fff; /* Color de fondo al hacer hover */
+  margin: 0.3%; /* Margen */
+  width: 24.5%; /* Ancho al hacer hover */
+  padding: 1.8%; /* Relleno al hacer hover */
+}
+
+.muñeco-img {
+  position: absolute; /* Posición absoluta */
+  width: 60%; /* Ancho */
+  bottom: 45%; /* Distancia desde el borde inferior */
+  left: 10%; /* Distancia desde el borde izquierdo */
 }
 
 .Footer {
-  background: #f3f5fc; /* Fondo del encabezado */
-  height: 11vh; /* Altura del encabezado */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute; /* Posición absoluta */
+  width: 100%; /* Ancho */
+  height: 7%; /* Altura */
+  left: 0%; /* Distancia desde el borde izquierdo */
+  bottom: 0%; /* Distancia desde el borde inferior */
+  display: flex; /* Mostrar como flexbox */
+  flex-direction: row; /* Dirección de fila */
+  align-items: center; /* Alinear elementos al centro */
+  justify-content: center; /* Justificar contenido al centro */
+  background-color: #f3f5fc; /* Color de fondo */
 }
 
 .Footer p {
   font-family: "Inter", sans-serif; /* Familia de fuente */
-  font-style: normal; /* Estilo de fuente */
   font-weight: 400; /* Peso de la fuente */
-  font-size: 12px; /* Tamaño de fuente */
-  color: #495057; /* Color del texto */
-  opacity: 0.8; /* Opacidad del texto */
-  text-align: center; /* Alineación de texto */
-  margin: 0; /* Eliminar márgenes predeterminados */
-  position: absolute; /* Posición absoluta */
-  bottom: 1; /* Alinear al fondo */
-  width: 100%; /* Ancho completo */
+  font-size: 14px; /* Tamaño de fuente */
+  line-height: 150%; /* Altura de línea */
+  color: #030303; /* Color del texto */
+  margin: 0; /* Elimina el margen */
 }
+
