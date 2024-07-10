@@ -1,93 +1,69 @@
-// Función para encriptar el texto
 function encriptar() {
-  // Obtener el texto ingresado por el usuario desde el textarea
-  let texto = document.getElementById("texto").value;
+  var texto = document.getElementById("texto").value;
   
-  // Obtener elementos del DOM que se van a modificar
-  let tituloMensaje = document.getElementById("Titulo-mensaje");
-  let parrafo = document.getElementById("Instruccion");
-  let textoEncriptado = document.getElementById("Texto-encriptado");
-  let muñecoImg = document.querySelector('.Sec-encriptado .muñeco-img');
-  let btnCopiar = document.getElementById("Boton-copiar");
-
-  // Reemplazar las vocales con secuencias específicas para encriptar
-  let textoCifrado = texto
-    .replace(/e/gi, "enter")
-    .replace(/i/gi, "imes")
-    .replace(/a/gi, "ai")
-    .replace(/o/gi, "ober")
-    .replace(/u/gi, "ufat");
-
-  // Verificar si el campo de texto no está vacío
-  if (texto.length != 0) {
-    // Mostrar mensaje de éxito y resultados encriptados
-    tituloMensaje.textContent = "Texto encriptado con éxito";
-    parrafo.textContent = "";
-    textoEncriptado.textContent = textoCifrado; // Mostrar texto encriptado
-    muñecoImg.style.display = 'none'; // Ocultar imagen de muñeco
-    tituloMensaje.style.display = "none"; // Ocultar mensaje de error
-    btnCopiar.style.display = "block"; // Mostrar botón de copiar texto
-  } else {
-    // Mostrar mensaje de error y restablecer elementos visuales
-    muñecoImg.style.display = 'block'; // Mostrar imagen de muñeco
-    tituloMensaje.textContent = "Ningún mensaje fue encontrado";
-    parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-    tituloMensaje.style.display = "block"; // Mostrar mensaje de error
-    btnCopiar.style.display = "none"; // Ocultar botón de copiar texto
-    alert("Debes ingresar un texto"); // Alerta al usuario sobre campo vacío
+  // Validar caracteres permitidos
+  if (!validarTexto(texto)) {
+    alert("Solo se permiten letras minúsculas sin acentos ni caracteres especiales.");
+    return;
   }
+  
+  var textoEncriptado = texto
+      .replace(/e/g, "enter")
+      .replace(/i/g, "imes")
+      .replace(/a/g, "ai")
+      .replace(/o/g, "ober")
+      .replace(/u/g, "ufat");
+
+  mostrarMensajeEncriptado(textoEncriptado);
 }
 
-// Función para desencriptar el texto
 function desencriptar() {
-  // Obtener el texto ingresado por el usuario desde el textarea
-  let texto = document.getElementById("texto").value;
+  var texto = document.getElementById("texto").value;
   
-  // Obtener elementos del DOM que se van a modificar
-  let tituloMensaje = document.getElementById("Titulo-mensaje");
-  let parrafo = document.getElementById("Instruccion");
-  let textoDesencriptado = document.getElementById("Texto-encriptado");
-  let muñecoImg = document.querySelector('.Sec-encriptado.muñeco-img');
-  let btnCopiar = document.getElementById("Boton-copiar");
-
-  // Reemplazar las secuencias encriptadas por las vocales originales
-  let textoCifrado = texto
-    .replace(/enter/gi, "e")
-    .replace(/imes/gi, "i")
-    .replace(/ai/gi, "a")
-    .replace(/ober/gi, "o")
-    .replace(/ufat/gi, "u");
-
-  // Verificar si el campo de texto no está vacío
-  if (texto.length != 0) {
-    // Mostrar mensaje de éxito y resultados desencriptados
-    tituloMensaje.textContent = "Texto desencriptado con éxito";
-    parrafo.textContent = "";
-    textoDesencriptado.textContent = textoCifrado; // Mostrar texto desencriptado
-    muñecoImg.style.display = 'none'; // Ocultar imagen de muñeco
-    tituloMensaje.style.display = "none"; // Ocultar mensaje de error
-    btnCopiar.style.display = "block"; // Mostrar botón de copiar texto
-  } else {
-    // Mostrar mensaje de error y restablecer elementos visuales
-    muñecoImg.style.display = 'block'; // Mostrar imagen de muñeco
-    tituloMensaje.textContent = "Ningún mensaje fue encontrado";
-    parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-    tituloMensaje.style.display = "block"; // Mostrar mensaje de error
-    btnCopiar.style.display = "none"; // Ocultar botón de copiar texto
-    alert("Debes ingresar un texto"); // Alerta al usuario sobre campo vacío
+  // Validar caracteres permitidos
+  if (!validarTexto(texto)) {
+    alert("Solo se permiten letras minúsculas sin acentos ni caracteres especiales.");
+    return;
   }
+  
+  var textoDesencriptado = texto
+      .replace(/enter/g, "e")
+      .replace(/imes/g, "i")
+      .replace(/ai/g, "a")
+      .replace(/ober/g, "o")
+      .replace(/ufat/g, "u");
+
+  mostrarMensajeEncriptado(textoDesencriptado);
 }
 
-// Función para copiar el texto encriptado o desencriptado al portapapeles
+function mostrarMensajeEncriptado(mensaje) {
+  var tituloMensaje = document.getElementById("Titulo-mensaje");
+  var instruccion = document.getElementById("Instruccion");
+  var textoEncriptado = document.getElementById("Texto-encriptado");
+  var botonCopiar = document.getElementById("Boton-copiar");
+  var munecoImg = document.querySelector(".muñeco-img");
+
+  tituloMensaje.style.display = "none";
+  instruccion.style.display = "none";
+  textoEncriptado.style.display = "block";
+  textoEncriptado.textContent = mensaje;
+  botonCopiar.style.display = "block";
+  munecoImg.style.display = "none";
+}
+
 function copiarTexto() {
-  // Obtener el texto encriptado o desencriptado desde el elemento HTML
-  let textoCopiar = document.getElementById("Texto-encriptado").textContent;
-  
-  // Usar la API del portapapeles para escribir el texto copiado
-  navigator.clipboard.writeText(textoCopiar)
-    .then(() => {
-    })
-    .catch(err => {
-      console.error('No se pudo copiar el texto: ', err); // Manejo de errores
-    });
+  var textoEncriptado = document.getElementById("Texto-encriptado").textContent;
+  navigator.clipboard.writeText(textoEncriptado)
+      .then(() => {
+          alert("Texto copiado al portapapeles");
+      })
+      .catch(err => {
+          alert("Hubo un error al copiar el texto: ", err);
+      });
+}
+
+function validarTexto(texto) {
+  // Expresión regular para verificar si el texto solo contiene letras minúsculas y sin acentos
+  var regex = /^[a-z]+$/;
+  return regex.test(texto);
 }
