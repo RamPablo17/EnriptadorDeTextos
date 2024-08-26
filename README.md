@@ -17,6 +17,9 @@ La letra "a" es convertida para "ai"
 La letra "o" es convertida para "ober"
 La letra "u" es convertida para "ufat"</p>
 
+![image](https://github.com/user-attachments/assets/31f2d03c-41d8-4891-8ff7-1de9cece871a)
+
+
 <h3>Requisitos</h3>
 
 <p>Debe funcionar solo con letras minúsculas
@@ -26,6 +29,9 @@ Por ejemplo:
 "gato" => "gaitober"
 gaitober" => "gato"
 
+![image](https://github.com/user-attachments/assets/ae5accf2-3df5-487e-b36e-cd17037eab4e)
+
+
 La página debe tener campos para
 inserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre as dos opciones.
 El resultado debe ser mostrado en la pantalla.
@@ -34,13 +40,9 @@ El resultado debe ser mostrado en la pantalla.
 <h4>Extras:</h4>
 
 <p>Un botón que copie el texto encriptado/desencriptado para la sección de transferencia, o sea que tenga la misma funcionalidad del ctrl+C o de la opción "copiar" del menú de las aplicaciones.
-Tenemos un periodo de tiempo de cuatro semanas para desarrollar el proyecto y vamos a trabajar con el sistema ágil de desarrollo, utilizando el Trello de la siguiente forma:
 
-La columna Listos para iniciar presenta las tarjetas con elementos que aun no fueron desarrollados.
-En la columna En Desarrollo estarán los elementos que estés desarrollando en el momento. Al iniciar una tarea, podrás mover la tarjeta que contiene dicha tarea para esta columna.
-En la columna Pausado estarán los elementos que comenzaste a desarrollar, pero necesitaste parar por algún motivo.
-Por fin, en la columna Concluido estarán los elementos ya concluidos.
-El Trello es una herramienta de uso individual para que puedas controlar el progreso de tus actividades, pero no será evaluada.
+  ![image](https://github.com/user-attachments/assets/8188b944-2d94-4a5c-82c6-eb9b49795319)
+
 </p>
 
 
