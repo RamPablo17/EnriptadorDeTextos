@@ -1,5 +1,8 @@
 <h1>CHALLENGE ONE FRONT END - Encriptador de texto </h1>
 
+![image](https://github.com/user-attachments/assets/4fabf9d5-b3cf-4a1b-b146-173078c746ab)
+
+
 <p>Aplicación para encriptar y desencriptar textos.
 La aplicación forma parte del primer Challenge propuesto por Alura Latam para las capacitaciones presentes en el programa elaborado por Oracle Next Education (ONE).</p>
 
