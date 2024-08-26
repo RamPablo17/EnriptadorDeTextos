@@ -1,61 +1,56 @@
 <!DOCTYPE html>
-<html lang="es-mx">
-<head>
-  <!-- Configuración del documento -->
-  <meta charset="UTF-8" /> <!-- Codificación del documento -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Configuración de compatibilidad -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Escalado inicial para dispositivos móviles -->
-  <title>Encriptador de Texto</title> <!-- Título de la página -->
-  <link rel="stylesheet" href="style.css"> <!-- Enlace al archivo de estilos -->
-</head>
-<body>
-  <header class="header">
-    <img src="./Imagenes/Logo.png"> <!-- Imagen del logo en el encabezado -->
-  </header>
-  <div class="Contenedor">
-    <!-- Contenedor principal -->
-    <div class="Sec-encriptar">
-      <!-- Sección para encriptar -->
-      <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Ingresa el texto aquí"></textarea>
-      <!-- Área de texto para ingresar el mensaje -->
-      <div class="Termino__Y__Condiciones">
-        <!-- Sección de términos -->
-        <img src="./Imagenes/Group.png">
-        <!-- Icono de términos -->
-        <p>Solo letras minúsculas y sin acentos.</p> <!-- Texto de los términos -->
-      </div>
-      <div class="Botones">
-        <!-- Sección de botones -->
-        <button class="Boton-encriptar" type="button" onclick="encriptar()">
-          Encriptar
-        </button>
-        <!-- Botón para encriptar -->
-        <button class="Boton-desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
-        <!-- Botón para desencriptar -->
-      </div>
-    </div>
-    <div class="Sec-encriptado">
-      <!-- Sección de resultado encriptado -->
-      <div class="Mensaje-encriptado" id="Mensaje-encriptado">
-        <!-- Contenedor del mensaje encriptado -->
-        <h2 id="Titulo-mensaje">Ningún mensaje fue encontrado</h2>
-        <!-- Título inicial -->
-        <p class="Instrucción" id="Instruccion">Ingresa el texto que deseas encriptar o desencriptar</p>
-        <!-- Párrafo inicial -->
-        <p id="Texto-encriptado" class="texto-encriptado"></p>
-        <!-- Aquí se mostrará el texto encriptado o desencriptado -->
-      </div>
-      <button id="Boton-copiar" onclick="copiarTexto()">Copiar </button>
-      <!-- Botón para copiar el texto -->
-      <img src="./Imagenes/muñeco.png" class="muñeco-img" />
-      <!-- Imagen del muñeco -->
-    </div>
-  </div>
-  <script src="index.js"></script>
-  <!-- Enlace al archivo JavaScript -->
-  <footer class="Footer">
-    <p>Desarrollado por Pablo Ramirez Cabrera </p>
-    <!-- Pie de página -->
-  </footer>
-</body>
+
+<html lang="es">
+
+    <head>
+        <!--Cacteres-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--Adaptación-->
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador de Texto Oracule ONE</title>
+
+        <!--Agregamos la extensión al estilo y formato de fuente-->
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!--Encabezado-->
+        <header>
+            <img class="logo" src="img/Logo.png" alt="Logo de Alura">
+        </header>
+
+        <main>
+            <!--Cuerpo-->
+            <section>
+                <textarea class="entrada-texto" cols="30" rows="10" placeholder="Ingrese el texto aquí" autofocus></textarea>
+                <div>
+                    <h6 class= "restriccion"> Solo letras minúsculas y sin acentos.</h6>
+                </div>
+                <!--Botones-->
+                <div class="botones">
+                    <button name="encriptar" class="encriptar" onclick="encriptar()">Encriptar</button>
+                    <button name="desencriptar" class="desencriptar" onclick="desencriptar()">Desencriptar</button>
+                </div>
+            </section>
+            <section>
+                <textarea class="salida-texto" cols="20" rows="10" disabled></textarea>
+                <div class="dinamico">
+                    <h2 class="texto1">Ningún mensaje fue encontrado</h2>
+                    <h3 class="texto2">Ingresa el texto que desees encriptar o desencriptar.</h3>
+                    <button name="copiar" class="copiar" onclick="copiar()" style="display: none;"><span class="anuncio"></span>Copiar</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <!--Pie de página-->
+            <p class="Cred">Creado por Pablo Ramirez C</p>
+        </footer>
+
+    </body>
+
+    <script src="script.js"></script>
+
 </html>
