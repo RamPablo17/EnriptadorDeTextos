@@ -27,9 +27,13 @@ No deben ser utilizados letras con acentos ni caracteres especiales
 Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
 Por ejemplo:
 "gato" => "gaitober"
+  
+  ![image](https://github.com/user-attachments/assets/ae5accf2-3df5-487e-b36e-cd17037eab4e)
+  
 gaitober" => "gato"
 
-![image](https://github.com/user-attachments/assets/ae5accf2-3df5-487e-b36e-cd17037eab4e)
+![image](https://github.com/user-attachments/assets/f8884699-0369-4e6c-bafc-c1302b841306)
+
 
 
 La página debe tener campos para
